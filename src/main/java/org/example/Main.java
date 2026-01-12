@@ -3,9 +3,9 @@ package org.example;
 import java.util.Scanner;
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
-    private static int saciedad = 6;
-    private static int energia = 6;
-    private static int diversion = 6;
+    private static int saciedad = -1;
+    private static int energia = 2;
+    private static int diversion = 2;
     public static void main(String[] args) {
         int opcion;
 
@@ -20,7 +20,7 @@ public class Main {
                     break;
                 case 2:
                     if (saciedad < 10) {
-                        saciedad = saciedad + 3;
+                        saciedad = saciedad + 2;
                         if (saciedad > 10) {
                             saciedad = 10;
                         }
@@ -32,12 +32,12 @@ public class Main {
                     break;
                 case 3:
                     if (diversion < 10) {
-                        diversion += 3;
+                        diversion += 2;
                         if (diversion > 10) {
                             diversion = 10;
                         }
                         saciedad--;
-                        energia--;
+                        energia-=2;
                         mostrarEstado();
                     } else {
                         System.out.println("Ahora no me apetece jugar");
