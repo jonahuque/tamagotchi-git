@@ -30,6 +30,19 @@ public class Main {
                         System.out.println("No tengo hambre");
                     }
                     break;
+                case 3:
+                    if (diversion < 10) {
+                        diversion += 3;
+                        if (diversion > 10) {
+                            diversion = 10;
+                        }
+                        saciedad--;
+                        energia--;
+                        mostrarEstado();
+                    } else {
+                        System.out.println("Ahora no me apetece jugar");
+                    }
+                    break;
             }
         }while(opcion !=0);
 
