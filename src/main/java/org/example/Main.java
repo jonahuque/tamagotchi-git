@@ -20,11 +20,12 @@ public class Main {
                     break;
                 case 2:
                     if (saciedad < 10) {
-                        saciedad = saciedad + 5;
+                        saciedad = saciedad + 3;
                         if (saciedad > 10) {
                             saciedad = 10;
                         }
                         diversion--;
+                        mostrarEstado();
                     } else {
                         System.out.println("No tengo hambre");
                     }
