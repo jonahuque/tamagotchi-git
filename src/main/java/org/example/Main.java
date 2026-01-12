@@ -43,6 +43,19 @@ public class Main {
                         System.out.println("Ahora no me apetece jugar");
                     }
                     break;
+                case 4:
+                    if (energia < 10) {
+                        energia += 3;
+                        if (energia > 10) {
+                            energia = 10;
+                        }
+                        saciedad -= 3;
+                        diversion -= 2;
+                        mostrarEstado();
+                    } else {
+                        System.out.println("No tengo sueño");
+                    }
+                    break;
             }
         }while(opcion !=0);
 
