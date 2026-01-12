@@ -11,6 +11,14 @@ public class Main {
 
         do{
             opcion = menuPrincipal();
+            switch(opcion){
+                case 1:
+                    mostrarEstado();
+                    break;
+                case 0:
+                    System.out.println("Saliendo del juego");
+                    break;
+            }
         }while(opcion !=0);
 
     }
