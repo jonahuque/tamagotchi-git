@@ -18,6 +18,17 @@ public class Main {
                 case 0:
                     System.out.println("Saliendo del juego");
                     break;
+                case 2:
+                    if (saciedad < 10) {
+                        saciedad = saciedad + 5;
+                        if (saciedad > 10) {
+                            saciedad = 10;
+                        }
+                        diversion--;
+                    } else {
+                        System.out.println("No tengo hambre");
+                    }
+                    break;
             }
         }while(opcion !=0);
 
