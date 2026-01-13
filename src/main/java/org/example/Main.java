@@ -56,6 +56,18 @@ public class Main {
                         System.out.println("No tengo sueño");
                     }
                     break;
+                case 5:
+                    if (energia < 10) {
+                        energia += 2;
+                        if (energia > 10) {
+                            energia = 10;
+                        }
+                        diversion --;
+                        mostrarEstado();
+                    }else{
+                        System.out.println("Ya me siento bien");
+                    }
+                    break;
             }
         }while(opcion !=0);
 
@@ -69,6 +81,7 @@ public class Main {
             System.out.println("2. Comer");
             System.out.println("3. Jugar");
             System.out.println("4. Dormir");
+            System.out.println("5. Curar");
             System.out.println("------------------------");
             System.out.println("0. Salir");
             System.out.println("Seleccione una opción del menú");
@@ -78,7 +91,7 @@ public class Main {
 
             }
             opcion = scanner.nextInt();
-        }while(opcion < 0 || opcion > 4);
+        }while(opcion < 0 || opcion > 5);
 
         return opcion;
     }
